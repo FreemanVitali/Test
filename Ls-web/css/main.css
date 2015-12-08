@@ -3,13 +3,14 @@
 
 *{
 	padding:0; margin:0;
-	
 	}
+
+
 	
 body {
 	width:100%;
 	height:auto;
-	background-image:url(img/background-img.png);
+	background-image:url(../img/background-img.png);
 	margin:0 auto;
 }
 	
@@ -40,23 +41,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7eff3', end
 }
 
 .logo {
-	width:52px;
-	height:40px;
+	width:246px;
+	height:43px;
 	float:left;
 	overflow:hidden;
 	margin:21px 0px;
 	}
-
-.logo-name {
-	margin:21px 10px;
-	width:179px;
-	height:42px;
-	float:left;
-  background-repeat: no-repeat;
-  display: block;
-  background-position: -5px -5px;
-  color: transparent;
-}
 
 
 .social-buttons a {
@@ -68,12 +58,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7eff3', end
 
 }
 	
-.fb, .tw, .vk {
+.fb, .tw, .vk, .gh {
 margin-right: 21px;
+text-indent: -9999em;
+width: 100%;
+height:100%;
 }	
 
 .logo-name, a.vk, a.vk:hover, a.tw, a.tw:hover, a.fb, a.fb:hover, a.gh, a.gh:hover {
-		background-image:url(img/spritesheet.png);
+		background-image:url(../img/spritesheet.png);
 	}
 
 a.vk {
@@ -168,9 +161,9 @@ ul, menu {
 
 .navigation-link:hover {
     color: #3ba8c0;
-}
+  }
 
-.contact-block {
+  .contact-block {
 	float: left;
   
 }
@@ -207,19 +200,19 @@ ul, menu {
 
 .my-email {
 	background-color: #41b9d4;
-	background-image: url(img/email-ico.png);
+	background-image: url(../img/email-ico.png);
 	}
 
 .my-phone {
 	background-color: #48cbe8;
-	background-image: url(img/phone-ico.png);
+	background-image: url(../img/phone-ico.png);
 	
 }
 
 .my-skype {
 	background-color: #51daf8;
 	border-radius:0 0 5px 5px;
-	background-image: url(img/skype-ico.png);
+	background-image: url(../img/skype-ico.png);
 	
 }
 
@@ -302,7 +295,7 @@ font-size: 14px;
 	width:36px;
 	height:34px;
 	margin:0 10px 30px 57px;
-  background:url(img/work-icon.png);
+  background:url(../img/work-icon.png);
 	float:left;
 	
 }
@@ -311,7 +304,7 @@ font-size: 14px;
 	width:42px;
 	height:23px;
 	margin:0 10px 30px 52px;
-  background:url(img/education.png);
+  background:url(../img/education.png);
 	float:left;
 }
 
@@ -319,7 +312,7 @@ font-size: 14px;
 	width:26px;
 	height:32px;
 	margin:0 15px 30px 57px;
-  background:url(img/courses-icon.png);
+  background:url(../img/courses-icon.png);
 	float:left;
 }
 
@@ -330,7 +323,6 @@ font-size: 14px;
 	font-size: 15px;
 }
 
-/*----------START FOOTER--------------*/
 .footer {
   width:100%;
 	background-color:#eff3f7;
@@ -354,7 +346,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7eff3', end
 
 .login-admin {
 	margin-left: 340px;
-	background-image:url(img/spritesheet.png);
+	background-image:url(../img/spritesheet.png);
 	width: 21px;
   height: 33px;
   background-position: -176px -100px;
@@ -377,4 +369,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7eff3', end
 	height:100%;
 	width: 100%;
  }
-
