@@ -5,8 +5,6 @@
 	padding:0; margin:0;
 	}
 
-
-	
 body {
 	width:100%;
 	height:auto;
@@ -48,14 +46,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7eff3', end
 	margin:21px 0px;
 	}
 
+.social-buttons {
+ float: right;
+}
 
 .social-buttons a {
-	float:right;
-	width:49px;
+  width:49px;
 	height:49px;
 	margin-top: 17px;
 	display: inline-block;
-
 }
 	
 .fb, .tw, .vk, .gh {
@@ -179,6 +178,7 @@ ul, menu {
 }
 
 
+
 .my-email, .my-phone, .my-skype {
 	height: 35px;
 	width: 190px;
@@ -246,9 +246,14 @@ ul, menu {
 	font-family: 'fira_sansbook';
 }
 
+.photo-main {
+width: 150px;
+height: auto;
+}
 
 .avatar {
-	width: 150px;
+	width: 100%;
+	height: auto;
 	float: left;
 	height: auto;
 	border-radius: 100px;
@@ -354,7 +359,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7eff3', end
   
 }
 
-.login-admin:active {
+.login-admin:hover {
 	background-position: -176px -57px;
 }
 
