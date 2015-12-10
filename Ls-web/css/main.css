@@ -1,9 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
 
+
 *{
+	box-sizing: border-box;
+	}
+
+	*{
 	padding:0; margin:0;
 	}
+
 
 body {
 	width:100%;
@@ -22,20 +28,23 @@ body {
 
 .header-content {
 	width:1200px;
-	height:100px;
+	height:100%;
 	margin:0 auto;
 	padding: 20px 0 0px 0;
 
 }
 
-.header-content-border {
-width:100%;
-height: 5px;
-background: #e7eff3; /* Old browsers */
-background: -moz-linear-gradient(left, #e7eff3 0%, #99bac5 21%, #21697d 48%, #99bac5 75%, #e7eff3 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, #e7eff3 0%,#99bac5 21%,#21697d 48%,#99bac5 75%,#e7eff3 100%);  Chrome10-25,Safari5.1-6 
-background: linear-gradient(to right, #e7eff3 0%,#99bac5 21%,#21697d 48%,#99bac5 75%,#e7eff3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7eff3', endColorstr='#e7eff3',GradientType=1 ); /* IE6-9 */
+.header:after,
+.footer:before {
+	content: ' ';
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #1C667A;
+	background-image: -moz-linear-gradient(left, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
+	background-image: -o-linear-gradient(left, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
+	background-image: -webkit-linear-gradient(left, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
+	background-image: linear-gradient(to right, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
 }
 
 .logo {
@@ -57,12 +66,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7eff3', end
 	display: inline-block;
 }
 	
-.fb, .tw, .vk, .gh {
-margin-right: 21px;
+.fb, .tw, .vk {
+margin-right: 16px;
 text-indent: -9999em;
 width: 100%;
 height:100%;
 }	
+
+.gh {
+text-indent: -9999em;
+width: 100%;
+height:100%;
+	}
 
 .logo-name, a.vk, a.vk:hover, a.tw, a.tw:hover, a.fb, a.fb:hover, a.gh, a.gh:hover {
 		background-image:url(../img/spritesheet.png);
@@ -118,6 +133,7 @@ a.gh:hover {
     overflow: hidden;
     border-radius: 4px;
     background-color: #eff3f7;
+    width: 100%;
 }
 
 ul, menu {
@@ -162,16 +178,17 @@ ul, menu {
     color: #3ba8c0;
   }
 
-  .contact-block {
+.contact-block {
 	float: left;
+  width: 100%;
   
 }
 
 .contact-block-title {
 	background-color: #3ba8c0;
 	border-radius:5px 5px 0 0;
-	height: 11px;
-	width: 230px;
+	height: 40px;
+	width: 100%;
 	padding: 7px 0 22px 20px;
 	color: #ffffff;
 	font-size: 21px;
@@ -180,8 +197,8 @@ ul, menu {
 
 
 .my-email, .my-phone, .my-skype {
-	height: 35px;
-	width: 190px;
+	height: 40px;
+	width: 100%;
 	border:none;
 	color: #ffffff;
 	cursor: pointer;
@@ -217,22 +234,13 @@ ul, menu {
 }
 
 .my-email, .my-phone, .my-skype {
-	background-position: 7% 45%;
+	background-position: 10% 52%;
 	background-repeat: no-repeat;
 }
 
 .main-content {
 	float:right;
 	
-}
-
-.content-block-title {
-	font-size: 27px;
-    border-bottom: 2px solid #3BA8C0;
-    margin: 0px 0px 23px;
-    padding: 13px;
-    display: inline-block;
-    color: #3BA8C0;
 }
 
 .content-block {
@@ -242,8 +250,35 @@ ul, menu {
 	margin-bottom:25px;
 	overflow:hidden;
 	color:#4a545d;
-	font-size:15px;
+	font-size:17px;
 	font-family: 'fira_sansbook';
+}
+
+.content-block-title {
+	font-size: 27px;
+    border-bottom: 2px solid #3BA8C0;
+    margin: 0px 0px 14px;
+    padding: 13px;
+    display: inline-block;
+    color: #3BA8C0;
+    font-weight: normal;
+}
+
+
+*{
+	box-sizing: border-box;
+	}
+
+.work-description, .education-description {
+	padding: 0 40px 0 101px;
+	text-align: left;
+	/*display: block;*/
+}
+
+.work-period, .education-period  {
+	padding:0 0 35px 0;
+	font-family: 'fira_sanslight';
+	font-size: 15px;
 }
 
 .photo-main {
@@ -258,24 +293,35 @@ height: auto;
 	height: auto;
 	border-radius: 100px;
   border: 5px solid #32a7bd;
-  margin: 0 24px 45px 55px;
+  margin: 16px 24px 45px 55px;
    
 }
-
 
 .main-description {
 	font-weight: bold;
 	line-height: 2;
 	font-family: 'fira_sansmedium';
   font-size: 17px;
-  margin-right: 8px;
+}
+
+.main-description-data {
+margin-left: 18px;
+
 }
 .skills {
 	width: 5%;
-	margin-right: 65px;
 	position: relative;
+	margin-left: 2%;
 }
 
+.last-elements {
+	display: inline-block;
+	margin-left: 25.8%;
+}
+
+/*.skills:first-child {
+	ma
+}*/
 
 .main-html, .main-css, .main-javascript, .main-gulp, .main-git {
 background: rgb(59,168,192); /* Old browsers */
@@ -283,7 +329,7 @@ background: -moz-linear-gradient(top, rgba(59,168,192,1) 0%, rgba(46,140,162,1) 
 background: -webkit-linear-gradient(top, rgba(59,168,192,1) 0%,rgba(46,140,162,1) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, rgba(59,168,192,1) 0%,rgba(46,140,162,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba8c0', endColorstr='#2e8ca2',GradientType=0 ); /* IE6-9 */
-padding:  2px 12px 2px 12px;;
+padding:  2px 14px 2px 14px;;
 border-radius: 2px;
 color:#fff;
 display: inline-block;
@@ -291,15 +337,11 @@ font-family: 'proxima_nova_condensedSBd';
 font-size: 14px;
 }
 
-.last-elements {
-	display: inline-block;
-	margin-left: 25.3%;
-}
 
 .item-icon {
 	width:36px;
 	height:34px;
-	margin:0 10px 30px 57px;
+	margin:0 10px 10px 57px;
   background:url(../img/work-icon.png);
 	float:left;
 	
@@ -308,7 +350,7 @@ font-size: 14px;
 .item-icon-education {
 	width:42px;
 	height:23px;
-	margin:0 10px 30px 52px;
+	margin:0 10px 10px 52px;
   background:url(../img/education.png);
 	float:left;
 }
@@ -316,37 +358,25 @@ font-size: 14px;
 .item-icon-courses {
 	width:26px;
 	height:32px;
-	margin:0 15px 30px 57px;
+	margin:0 15px 10px 57px;
   background:url(../img/courses-icon.png);
 	float:left;
 }
 
 
-.work-period {
-	padding:0 0 35px 0;
-	font-family: 'fira_sanslight';
-	font-size: 15px;
-}
-
 .footer {
   width:100%;
 	background-color:#eff3f7;
-	height:50px;
-	display: inline-block;
-	padding:35px 0 0 0;
+	height:77px;
 	float:left;
 	font-family: 'fira_sanslight';
 }
 
-.footer-content-border {
-float: left;
-width:100%;
-height: 5px;
-background: #e7eff3; /* Old browsers */
-background: -moz-linear-gradient(left, #e7eff3 0%, #99bac5 21%, #21697d 48%, #99bac5 75%, #e7eff3 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, #e7eff3 0%,#99bac5 21%,#21697d 48%,#99bac5 75%,#e7eff3 100%);  Chrome10-25,Safari5.1-6 
-background: linear-gradient(to right, #e7eff3 0%,#99bac5 21%,#21697d 48%,#99bac5 75%,#e7eff3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7eff3', endColorstr='#e7eff3',GradientType=1 ); /* IE6-9 */
+.foter-content {
+	width:1200px;
+	height:100%;
+	margin:0 auto;
+	padding: 20px 0 0px 0;
 }
 
 .login-admin {

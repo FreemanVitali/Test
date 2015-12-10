@@ -3,7 +3,7 @@
 border-radius:  0 0 5px 5px;
 }
 .contact-section-header {
-	height: 75px;
+	height: 137px;
 	background-color: #48cbe8;
 	border-bottom: 17px solid #67dffa;
 	font-family: 'fira_sansbook';
@@ -11,8 +11,8 @@ border-radius:  0 0 5px 5px;
 	font-size: 27px;
   border-radius: 5px 5px 0 0;
   text-align: center;
-  padding-top: 55px;
-  margin-bottom: 23px;
+  padding-top: 42px;
+  margin-bottom: 45px;
 }
 
 .contact-form-wraper {
@@ -26,7 +26,7 @@ border-radius:  0 0 5px 5px;
 	float: left;
 }
 
-.input-place-left {
+.input-place-right {
 	width: 48%;
 	float: right;
 }
@@ -39,10 +39,18 @@ border-radius:  0 0 5px 5px;
 .form-name, .form-email, .form-message {
 	border: 1px solid #48cbe8;
 	border-radius: 4px;
-  padding-left: 8px;
+  padding:2px 0 0 8px;
   font-family: 'fira_sanslight';
-  font-weight: 13px;
+  font-weight: 19px;
+  color:#54cee9;
+  margin-bottom: 12px;
 	}
+
+::-webkit-input-placeholder {color:#54cee9}
+::-moz-placeholder          {color:#54cee9}/* Firefox 19+ */
+:-moz-placeholder           {color:#54cee9}/* Firefox 18- */
+:-ms-input-placeholder      {color:#54cee9}
+
 
 .form-message { 
   width: 100%;
@@ -92,11 +100,10 @@ color: white;
 	border-bottom:none;
 }
 
-.submit-button:active{ 
+/*.submit-button:active{ 
 	border-top: 2px solid #3ba8c0;
-
 }
 
 .clear-button:active{
 border-bottom: 2px solid #687b8f;
-	}
+	}*/
