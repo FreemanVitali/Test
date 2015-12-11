@@ -1,3 +1,5 @@
 node_modules
 Ls-web/bower
 npm-debug.log
+Ls-web/popup.html
+Ls-web/css/popup.css

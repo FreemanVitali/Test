@@ -5,7 +5,7 @@
 *{
 	box-sizing: border-box;
 	}
-
+	
 	*{
 	padding:0; margin:0;
 	}
@@ -22,12 +22,14 @@ body {
 .header	{
 	background:#eff3f7;
 	width:100%;
+	min-width:1200px;
 	height:120px;
 	margin:0 0 40px 0;
 }
 
 .header-content {
-	width:1200px;
+	max-width:1200px;
+	min-width: 960px;
 	height:100%;
 	margin:0 auto;
 	padding: 20px 0 0px 0;
@@ -365,6 +367,7 @@ font-size: 14px;
 
 
 .footer {
+	min-width:1200px;
   width:100%;
 	background-color:#eff3f7;
 	height:77px;

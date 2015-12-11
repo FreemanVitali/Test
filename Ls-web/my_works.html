@@ -6,6 +6,7 @@
 <link href="fonts/stylesheet.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
 <link href="css/my_works.css" rel="stylesheet">
+<link href="css/popup.css" rel="stylesheet">
 
 
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
@@ -107,10 +108,39 @@
  		  	</div>
 
  		  	<div class="add-projekt">
- 		  	 <a class="add-projekt-bg" href="#">
+ 		  	 <a id="add-projekt-bg" href="#">
  		  	 <img alt="Добавить проект" class="add-projekt-img" src="img/add-projekt.png" />
  		  	  <span>Добавить проект</span></a>
  		  	</div>
+
+        <!-- /*-------------PopUp----------------------*/ -->
+<div id="popup-back">
+  <div class="popup-form-wrapper">
+  <div class="popup-form-header">
+  <a href="#" class="close-button"></a>
+   <span class="popup-form-title">Добавление проекта</span> 
+
+   </div> 
+<form class="form-wrapper">
+  <label class="label" for="project-name">Название проекта</label>
+   <input class="form-name" id="name" name="project_name" placeholder="Введите название" type="text">
+  
+  <label class="label" for="file-upload">Картинка проекта</label>
+   <input class="form-img" id="name" name="project_img" placeholder="Загрузите изображение" type="text">
+
+   <label class="label" for="file-upload">URL проекта</label>
+   <input class="form-url" id="name" name="project_url" placeholder="Добавьте ссылку" type="text">
+
+   <label class="label" for="message">Описание:</label>
+    <textarea class="form-message full" id="msg" name="project_message" placeholder="Пара слов о вашем проектк"></textarea><br />
+
+     <div class="input-button">
+    <button class="button submit-button" type="submit">Добавить</button>
+    </div>
+    </form>
+    </div>
+</div>
+       <!--  /*-------------PopUp END----------------------*/ -->
 
  		 </div>
  			 </div>

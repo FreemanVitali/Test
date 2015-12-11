@@ -95,7 +95,7 @@ color: red;
 	margin-left: 41%;
 }
 
-.add-projekt-bg {
+#add-projekt-bg {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -113,3 +113,4 @@ color: red;
 	border: 3px solid #3ba8c0;
 	border-radius: 5px;
 }
+
