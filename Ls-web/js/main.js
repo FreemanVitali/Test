@@ -1,11 +1,11 @@
-var popupLink = document.getElementById("add-projekt-bg");
-var popupCss = document.getElementById("popup-back");
+var addProjectBtn = document.getElementById("add-projekt-bg");
+var modalWindow = document.getElementById("popup-back");
+var closeWindowBtn = document.getElementById("close-button");
 
-popupLink.onclick = function(){
-popupCss.style.visibility = "visible";
+addProjectBtn.onclick = function(){
+	modalWindow.style.visibility = "visible";
 };
-// function popup () {
-//  $('.popup-back').css('display','inherit');
-//  $('.monster').css('display','none');
-//  $("#t2-list_copy").text($("#t2-list").text());
-// }
+
+closeWindowBtn.onclick = function(){
+	modalWindow.style.visibility = "hidden";
+};

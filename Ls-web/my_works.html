@@ -117,21 +117,36 @@
 <div id="popup-back">
   <div class="popup-form-wrapper">
   <div class="popup-form-header">
-  <a href="#" class="close-button"></a>
+  <a href="#" id="close-button"></a>
    <span class="popup-form-title">Добавление проекта</span> 
 
    </div> 
 <form class="form-wrapper">
-  <label class="label" for="project-name">Название проекта</label>
+  <label class="lable" name="project-name" for="project-name">Название проекта</label>
    <input class="form-name" id="name" name="project_name" placeholder="Введите название" type="text">
   
-  <label class="label" for="file-upload">Картинка проекта</label>
-   <input class="form-img" id="name" name="project_img" placeholder="Загрузите изображение" type="text">
-
-   <label class="label" for="file-upload">URL проекта</label>
-   <input class="form-url" id="name" name="project_url" placeholder="Добавьте ссылку" type="text">
-
-   <label class="label" for="message">Описание:</label>
+  <label class="lable" for="fileinput">Картинка проекта</label>
+  <div class="file_upload">
+        <button type="button">
+          <img src="http://bigben.one/img/upload-button.png"/>
+        </button>
+        <div>Загрузите изображение</div>
+        <input class="fileinput" type="file" id="fileinput" placeholder="Загрузите изображение">
+    </div>
+  <!-- <div class="upload-wrapper">
+   <input class="fileinput" type="file" id="fileinput" placeholder="Загрузите изображение">
+   <label for="fileinput">
+    <div class="blue-button">
+    <img class="upload-button-img" src="img/upload-button.png">
+    </div>
+     <input class="form-fake" disabled placeholder="Загрузите изображение" type="text">
+   </label>
+  </div> -->
+  
+    <label class="label" for="file-upload">URL проекта</label>
+  <input class="form-url" id="name" name="project_url" placeholder="Добавьте ссылку" type="text">
+  
+   <label class="delabel" for="message">Описание:</label>
     <textarea class="form-message full" id="msg" name="project_message" placeholder="Пара слов о вашем проектк"></textarea><br />
 
      <div class="input-button">
