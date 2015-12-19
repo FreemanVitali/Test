@@ -12,6 +12,7 @@ gulp.task('server', function () {
 
 gulp.task('watch', function () {
   gulp.watch([
+    'Ls-web/*.php',
   	'Ls-web/*.css',
     'Ls-web/*.html',
     'Ls-web/js/**/*.js',

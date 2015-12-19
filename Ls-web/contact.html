@@ -3,12 +3,12 @@
 <meta charset="utf-8">
 <title>Контакты</title>
 <!---CSS-->
+<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 <link href="fonts/stylesheet.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
 <link href="css/contact.css" rel="stylesheet">
-
-
-
+<link href="bower/qtip2/jquery.qtip.css" rel="stylesheet">
+<!-- Favico -->
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -34,7 +34,7 @@
   <div class="header-content">
    <a href="index.html" class="logo"><img alt="Логотип"  src="img/logo.png" /></a>
     <div class="social-buttons">
-      <a class="vk" href="#">vk.com</a>
+       <a class="vk" href="#">vk.com</a>
       <a class="tw" href="#">twitter</a>
       <a class="fb" href="#">facebook</a> 
       <a class="gh" href="#">GitHub</a>
@@ -46,18 +46,18 @@
    <aside class="sidebar">
       <nav class="navigation">
        <ul>
-         <li class="navigation-item"><a class="navigation-link" href="index.html" alt="Обо мне">Обо мне</a></li>
-         <li class="navigation-item"><a class="navigation-link"  href="my_works.html" alt="Мои работы">Мои работы</a></li>
-         <li class="navigation-item active"><a class="navigation-link" href="contact.html" alt="Связаться со мной">Связаться со мной</a></li> 
+         <li class="navigation-item"><a class="navigation-link" href="index.html">Обо мне</a></li>
+         <li class="navigation-item"><a class="navigation-link"  href="my_works.html">Мои работы</a></li>
+         <li class="navigation-item active"><a class="navigation-link" href="contact.html">Связаться со мной</a></li> 
       </ul>
   </nav>
 
 
    <menu class="contact-block">
    <li><div class="contact-block-title">Контакты</div></li>
-   <li><a class="my-email" href="mailto:aiderbox@gmail.com" alt="email">aiderbox@gmail.com</a></li>
-   <li><a class="my-phone" href="tel:80293422682" alt="Phone number">+375293422682</a></li>
-   <li><a class="my-skype" href="skype:vital858" alt="skype nickname">vital858</a></li>
+   <li><a class="my-email" href="mailto:aiderbox@gmail.com">aiderbox@gmail.com</a></li>
+   <li><a class="my-phone" href="tel:80293422682" >+375293422682</a></li>
+   <li><a class="my-skype" href="skype:vital858">vital858</a></li>
  </menu> 
 </aside>
 
@@ -68,16 +68,19 @@
    <div class="contact-form-wraper">
     <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
   <div class="input-place-left">
-    <label for="name">Имя:</label><br />
-    <input class="form-name" id="name" name="user_name" placeholder="Как к Вам обращаться" type="text"><br />
+  <span class="tooltip-forname-input">Ваше имя</span>
+    <label  for="name">Имя:</label><br />
+    <input type="text" class="form-name" id="name" name="user_name" placeholder="Как к Вам обращаться" qtip-content="Вы не ввели имя" ><br />
   </div>
   <div class="input-place-right">
+  <span class="tooltip-foremail-input">введите email</span>
     <label for="email">Email:</label><br />
-    <input class="form-email" id="mail" name="user_email" placeholder="Куда мне писать" type="email"><br />
+    <input class="form-email" id="mail" name="user_email" placeholder="Куда мне писать" qtip-position="right" qtip-content="Вы не ввели email" type="email"><br />
   </div>
   <div class="row">
+  <span class="tooltip-formessage-input">Сообщение</span>
     <label for="message">Сообщение:</label><br />
-    <textarea class="form-message full" id="msg" name="user_message" placeholder="Кратко в чем суть"></textarea><br />
+    <textarea class="form-message full" id="msg" name="user_message" placeholder="Кратко в чем суть" qtip-content="Опишите суть проекта"></textarea><br />
   </div>
   <p class="capcha-lable">Подтвердите что вы человек</p>
   
@@ -106,6 +109,11 @@
 </div>
       <!--jQuery-->
 <script src="bower/jquery/dist/jquery.min.js"></script>
-<script src="js/main.js"></script>
+<!-- Plugins -->
+<script src="bower/qtip2/jquery.qtip.js"></script>
+<!-- Js -->
+<script src="js/contact_me_form.js"></script>
+<script src="js/valid.js"></script>
+
 </body>
 </html>

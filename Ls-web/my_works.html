@@ -3,12 +3,14 @@
 <meta charset="utf-8">
 <meta charset="utf-8">
 <title>Пример работ</title>
+<!-- Css -->
+<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 <link href="fonts/stylesheet.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
 <link href="css/my_works.css" rel="stylesheet">
 <link href="css/popup.css" rel="stylesheet">
-
-
+<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
+<!-- fav-icon -->
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -43,18 +45,18 @@
   <aside class="sidebar">
     <nav class="navigation">
        <ul>
-         <li class="navigation-item"><a class="navigation-link" href="index.html" alt="Обо мне">Обо мне</a></li>
-         <li class="navigation-item active"><a class="navigation-link"  href="my_works.html" alt="Мои работы">Мои работы</a></li>
-         <li class="navigation-item"><a class="navigation-link" href="contact.html" alt="Связаться со мной">Связаться со мной</a></li> 
+         <li class="navigation-item"><a class="navigation-link" href="index.html">Обо мне</a></li>
+         <li class="navigation-item active"><a class="navigation-link"  href="my_works.html">Мои работы</a></li>
+         <li class="navigation-item"><a class="navigation-link" href="contact.html">Связаться со мной</a></li> 
       </ul>
   </nav>
 
 
   <menu class="contact-block">
    <li><div class="contact-block-title">Контакты</div></li>
-   <li><a class="my-email" href="mailto:aiderbox@gmail.com" alt="email">aiderbox@gmail.com</a></li>
-   <li><a class="my-phone" href="tel:80293422682" alt="Phone number">+375293422682</a></li>
-   <li><a class="my-skype" href="skype:vital858" alt="skype nickname">vital858</a></li>
+   <li><a class="my-email" href="mailto:aiderbox@gmail.com">aiderbox@gmail.com</a></li>
+   <li><a class="my-phone" href="tel:80293422682">+375293422682</a></li>
+   <li><a class="my-skype" href="skype:vital858">vital858</a></li>
  </menu> 
 </aside>
 
@@ -114,46 +116,48 @@
  		  	</div>
 
         <!-- /*-------------PopUp----------------------*/ -->
-<div id="popup-back">
+<div id="popup-window">
+ <div class="popup-back">
   <div class="popup-form-wrapper">
   <div class="popup-form-header">
-  <a href="#" id="close-button"></a>
+  <a href="#" id="close-button" type="reset" class="b-close"></a>
    <span class="popup-form-title">Добавление проекта</span> 
+</div> 
 
-   </div> 
-<form class="form-wrapper">
+<form action="upload.php" method="post" class="form-wrapper" id="form-wrapper" role="form" enctype="multipart/form-data">
+ <div class="server-message error-message"></div>  
+ <div class="server-message success-message"></div>
+ 
   <label class="lable" name="project-name" for="project-name">Название проекта</label>
-   <input class="form-name" id="name" name="project_name" placeholder="Введите название" type="text">
+   <input class="form-name" name="form-name" placeholder="Напишите название" type="text" qtip-content="Укажите ссылку проекта">
+     
   
   <label class="lable" for="fileinput">Картинка проекта</label>
-  <div class="file_upload">
-        <button type="button">
-          <img src="http://bigben.one/img/upload-button.png"/>
-        </button>
-        <div>Загрузите изображение</div>
-        <input class="fileinput" type="file" id="fileinput" placeholder="Загрузите изображение">
-    </div>
-  <!-- <div class="upload-wrapper">
-   <input class="fileinput" type="file" id="fileinput" placeholder="Загрузите изображение">
-   <label for="fileinput">
-    <div class="blue-button">
-    <img class="upload-button-img" src="img/upload-button.png">
-    </div>
-     <input class="form-fake" disabled placeholder="Загрузите изображение" type="text">
-   </label>
-  </div> -->
+  <div id="uploadfile" class="fileupload-wrapper">
+        <label class="fileupload-lable">
+       <img class="img-button" src="img/upload-button.png">
+       <input id="fileupload" type="file" name="files[]" class="fileupload"><!-- Этот инпут хитрым образом спрятан и отстилизован в CSS -->
+      <input id="fileurl" type="hidden" name="fileurl">
+       </label>
+         <input class="filename"  type="text"  name="filename" placeholder="Загрузите изображение" qtip-content="Загрузите изображение" disabled>
+  </div>
+
+
   
+    
     <label class="label" for="file-upload">URL проекта</label>
-  <input class="form-url" id="name" name="project_url" placeholder="Добавьте ссылку" type="text">
+  <input class="form-url"  name="project_url" placeholder="Добавьте ссылку" qtip-content="Cсылка на проект" type="text">
   
-   <label class="delabel" for="message">Описание:</label>
-    <textarea class="form-message full" id="msg" name="project_message" placeholder="Пара слов о вашем проектк"></textarea><br />
+   
+   <label for="message">Описание:</label>
+    <textarea class="form-message" id="msg" name="project_message" placeholder="Пара слов о вашем проекте" qtip-content="Опишите ваш поект"></textarea><br />
 
      <div class="input-button">
-    <button class="button submit-button" type="submit">Добавить</button>
+    <button type="submit" id="submit-button">Добавить</button>
     </div>
     </form>
     </div>
+</div>
 </div>
        <!--  /*-------------PopUp END----------------------*/ -->
 
@@ -172,7 +176,11 @@
   </div>
 </div>
 <script src="bower/jquery/dist/jquery.min.js"></script>
+<!-- Plugins -->
 <script src="bower/bPopup/jquery.bpopup.js"></script>
-<script src="js/main.js"></script>
+<script src="bower/qtip2/jquery.qtip.js"></script>
+<!-- Js -->
+<script src="js/valid.js"></script>
+<script src="js/add_proj.js"></script>
 </body>
 </html>

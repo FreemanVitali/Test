@@ -144,7 +144,8 @@ ul, menu {
 
 .navigation-item {
     margin: 0 11px;
-    height: 73px;
+    min-height: 73px;
+    height: auto;
     border-top: 2px solid #3ba8c0;
 }
 
@@ -274,6 +275,7 @@ ul, menu {
 .work-description, .education-description {
 	padding: 0 40px 0 101px;
 	text-align: left;
+	display: block;
 	/*display: block;*/
 }
 
@@ -407,3 +409,8 @@ font-size: 14px;
 	height:100%;
 	width: 100%;
  }
+
+ .error {
+  border: 1px solid #f97e76;
+  background-color:#fad2d1;
+}

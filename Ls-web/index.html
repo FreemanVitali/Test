@@ -3,7 +3,8 @@
 <meta charset="utf-8">
 <meta charset="utf-8">
 <title>Сайт портфолио</title>
-<link rel="stylesheet" href="bower/normalize.css">
+<!-- CSS -->
+<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 <link href="fonts/stylesheet.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
 
@@ -41,18 +42,18 @@
    <aside class="sidebar">
       <nav class="navigation">
        <ul>
-         <li class="navigation-item active"><a class="navigation-link" href="index.html" alt="Обо мне">Обо мне</a></li>
-         <li class="navigation-item"><a class="navigation-link"  href="my_works.html" alt="Мои работы">Мои работы</a></li>
-         <li class="navigation-item"><a class="navigation-link" href="contact.html" alt="Связаться со мной">Связаться со мной</a></li> 
+         <li class="navigation-item active"><a class="navigation-link" href="index.html">Обо мне</a></li>
+         <li class="navigation-item"><a class="navigation-link"  href="my_works.html">Мои работы</a></li>
+         <li class="navigation-item"><a class="navigation-link" href="contact.html">Связаться со мной</a></li> 
       </ul>
   </nav>
 
 
    <menu class="contact-block">
    <li><div class="contact-block-title">Контакты</div></li>
-   <li><a class="my-email" href="mailto:aiderbox@gmail.com" alt="email">aiderbox@gmail.com</a></li>
-   <li><a class="my-phone" href="tel:80293422682" alt="Phone number">+375293422682</a></li>
-   <li><a class="my-skype" href="skype:vital858" alt="skype nickname">vital858</a></li>
+   <li><a class="my-email" href="mailto:aiderbox@gmail.com">aiderbox@gmail.com</a></li>
+   <li><a class="my-phone" href="tel:80293422682">+375293422682</a></li>
+   <li><a class="my-skype" href="skype:vital858">vital858</a></li>
  </menu> 
 </aside>
 
@@ -62,7 +63,8 @@
    <h2 class="content-block-title">Основная информация</h2>
     <div class="photo-main">
       <img src="img/ava.jpg" alt="Аватар" class="avatar" /></div>
-    <ul>
+    
+   <ul>
      <li class="item-main">
      <p><span class="main-description">Меня зовут:</span><span class="main-description-data">Камейша Виталий</span></p></li>
      
@@ -84,26 +86,27 @@
      </span>
      </li>
      </ul>
+
   </article>
 
   <article class="content-block">
    <h2 class="content-block-title">Опыт работы</h2>
     <ul>
      <li class="item-icon"></li>
-     <div class="work-description"><p class="align-txt">ЧТУП "Медиа агентство глобал сервис" - Тех.поддержка.
+     <span class="work-description"><p class="align-txt">ЧТУП "Медиа агентство глобал сервис" - Тех.поддержка.
      </p>
     <p class="work-period">Сентябрь 2009 - Май 2013</p>
-     </div>
+     </span>
      
      <li class="item-icon"></li>
-     <div class="work-description">ООО "Инколор Плюс" - Менеджер экономист/Системный администратор.
+     <span class="work-description">ООО "Инколор Плюс" - Менеджер экономист/Системный администратор.
      <p class="work-period">Август 2013 - По настоящий момент.</p>
-     </div> 
+     </span> 
      
      </ul>
   </article>
   
-  <article class="content-block">
+    <article class="content-block">
   <h2 class="content-block-title">Образование</h2>
   <ul>
      <li class="item-icon-education"></li>
@@ -131,8 +134,7 @@
   <div class="login-admin"></div>
   <div class="copyright">&copy 2015. All rights reserved.</div>
   </div>
-</div>
-    <script src="bower/jquery/dist/jquery.min.js"></script>
-<script src="js/main.js"></script>
+ </div>
+ <script src="bower/jquery/dist/jquery.min.js"></script>
 </body>
 </html>

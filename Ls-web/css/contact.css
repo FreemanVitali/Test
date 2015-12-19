@@ -2,8 +2,9 @@
 .content-block {
 border-radius:  0 0 5px 5px;
 }
+
 .contact-section-header {
-	height: 137px;
+	min-height: 137px;
 	background-color: #48cbe8;
 	border-bottom: 17px solid #67dffa;
 	font-family: 'fira_sansbook';
@@ -24,12 +25,18 @@ border-radius:  0 0 5px 5px;
 .input-place-left {
 	width: 48%;
 	float: left;
+	
 }
 
 .input-place-right {
 	width: 48%;
 	float: right;
+	}
+
+#contact_form {
+	position: relative;
 }
+
 
 .form-name, .form-email {
 	line-height: 38px;
@@ -100,10 +107,12 @@ color: white;
 	border-bottom:none;
 }
 
-/*.submit-button:active{ 
-	border-top: 2px solid #3ba8c0;
+.qtip-content {
+  font-size: 15px;
+  color: #fff;
 }
 
-.clear-button:active{
-border-bottom: 2px solid #687b8f;
-	}*/
+.error {
+  border: 1px solid #f97e76;
+  background-color:#fad2d1;
+}
