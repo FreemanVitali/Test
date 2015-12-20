@@ -5,12 +5,28 @@
     "modernizr": "2.8.3",
     "bPopup": "bpopup#~0.11.0",
     "jquery": "jQuery#1.11.3",
-    "qtip2": "~2.2.1"
+    "qtip2": "~2.2.1",
+    "jquery-placeholder": "~2.3.1"
   },
   "resolutions": {
     "modernizr": "2.8.3"
   },
   "devDependencies": {
     "html5shiv": "~3.7.3"
+  },
+
+ "overrides" : {
+  "qtip2" : {
+    "main" : [
+   "./jquery.qtip.css",
+   "./jquery.qtip.js"
+    ],
+    "dependencies": {
+      "jquery": ">=1.6.0"
+    }
   }
 }
+
+}
+
+

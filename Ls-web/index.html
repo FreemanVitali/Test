@@ -4,10 +4,18 @@
 <meta charset="utf-8">
 <title>Сайт портфолио</title>
 <!-- CSS -->
-<link rel="stylesheet" href="bower/normalize-css/normalize.css">
-<link href="fonts/stylesheet.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
 
+<!-- build:css css/bower-combined.css -->
+<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+ <!-- end bower -->
+
+ <!-- build:css fonts/fonts-combined.css -->
+ <link href="fonts/stylesheet.css" rel="stylesheet">
+<!-- endbuild -->
+
+<!-- build:css css/my-combined.css -->
+<link href="css/main.css" rel="stylesheet">
+<!-- endbuild -->
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -18,7 +26,9 @@
 <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
  <!--Modernizr-->
+ <!-- build:css bower/bower-combined.js -->
 <script src="bower/modernizr/modernizr.js"></script>
+<!-- endbuild -->
 <!--[if lt IE 9]>
 <script src="bower/html5shiv/dist/html5shiv.min.js"></script>
   <![endif]-->
@@ -135,6 +145,10 @@
   <div class="copyright">&copy 2015. All rights reserved.</div>
   </div>
  </div>
- <script src="bower/jquery/dist/jquery.min.js"></script>
+ <!-- bower:js -->
+ <!-- build:js bower/bower-combined.js -->
+ <script src="bower/jquery/dist/jquery.min.js"></script> 
+ <!-- endbuild -->
+ <!-- end bower -->
 </body>
 </html>

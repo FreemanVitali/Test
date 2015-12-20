@@ -3,13 +3,23 @@
 <meta charset="utf-8">
 <meta charset="utf-8">
 <title>Пример работ</title>
-<!-- Css -->
+
+
+<!-- build:css css/bower-combined.css -->
 <link rel="stylesheet" href="bower/normalize-css/normalize.css">
+<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
+<!-- endbuild -->
+
+ <!-- build:css fonts/fonts-combined.css -->
 <link href="fonts/stylesheet.css" rel="stylesheet">
+<!-- endbuild -->
+
+ <!-- build:css css/my-combined.css -->
 <link href="css/main.css" rel="stylesheet">
 <link href="css/my_works.css" rel="stylesheet">
 <link href="css/popup.css" rel="stylesheet">
-<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
+<!-- endbuild -->
+
 <!-- fav-icon -->
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -21,7 +31,9 @@
 <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
  <!--Modernizr-->
+ <!-- build:css bower/bower-combined.js -->
 <script src="bower/modernizr/modernizr.js"></script>
+<!-- endbuild -->
 <!--[if lt IE 9]>
 <script src="bower/html5shiv/dist/html5shiv.min.js"></script>
   <![endif]-->
@@ -175,12 +187,17 @@
   <div class="copyright">&copy 2015. All rights reserved.</div>
   </div>
 </div>
-<script src="bower/jquery/dist/jquery.min.js"></script>
-<!-- Plugins -->
+ <!-- bower:js -->
+  <!-- build:js bower/bower-combined.js -->
+ <script src="bower/jquery/dist/jquery.min.js"></script>
 <script src="bower/bPopup/jquery.bpopup.js"></script>
 <script src="bower/qtip2/jquery.qtip.js"></script>
-<!-- Js -->
+<!-- endbuild -->
+ <!-- end bower -->
+
+ <!-- build:js js/my-combined.js -->
 <script src="js/valid.js"></script>
 <script src="js/add_proj.js"></script>
+<!-- endbuild -->
 </body>
 </html>

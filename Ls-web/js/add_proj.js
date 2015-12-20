@@ -14,6 +14,7 @@ var myProject = (function () {
 		$('#add-projekt-bg').on('click', _showModal); // open popup window
 		$('#form-wrapper').on('submit', _addProject); // add projekt
 		$('#fileupload').on('change', _changefileUpload); // upload image
+		$('#close-button').on('click', _clearAddForm);
 	};
 
 	var _changefileUpload = function () {
@@ -37,15 +38,18 @@ var myProject = (function () {
 		divPopup.bPopup({
 			speed: 10,
 			  positionStyle: 'fixed', 
-			onClose : function () { //on close window
+			  // modalClose : true
+        onClose : function () { //on close window
 				
-			this.find('.form-wrapper').trigger("reset");
+			 this.find('.form-wrapper').trigger("reset");
 			
 			}
 		});
 	};
 
-	// Add project
+
+
+// Add project
 	var _addProject = function (ev) { 
 		
 		ev.preventDefault();
@@ -94,6 +98,11 @@ var myProject = (function () {
 		});
 
 		return result; 
+	};
+
+	var _clearAddForm = function () {
+  $('.form-name, .form-url, .filename, .form-message').trigger('hideTooltip'); 
+  $('.form-name, .form-url, .filename, .form-message').removeClass('error'); 
 	};
 
 	

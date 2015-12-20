@@ -29,15 +29,13 @@ var validation = (function (){
   _setUpListners = function () {
 	    	$('form').on('keydown', '.error', _removeError); 
 	    	$('form').on('reset', _clearForm); 
-	    },
+	    	},
 	    
     	_removeError = function() {
-	      
-			$(this).removeClass('error');
+	      $(this).removeClass('error');
 	    },
 	    
-	    _clearForm = function () { 
-	      
+	    _clearForm = function (form) { 
 	      var form = $(this);
 	      form.find('.input, .textarea').trigger('hideTooltip'); 
 	      form.find('.error').removeClass('error'); 
