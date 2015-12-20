@@ -44,7 +44,7 @@ gulp.task('server', function () {
     gulp.task('extras', function () {
       return gulp.src([
         'Ls-web/*.*',
-        '!app/*.html'
+        '!Ls-web/*.html'
       ]).pipe(gulp.dest('dist'));
     });
 
@@ -87,3 +87,20 @@ gulp.task('default', ['server', 'watch']);
       .pipe(gulpif('*.css', minifyCss({compatibility: 'ie8'})))
       .pipe(gulp.dest('dist'));
   });
+
+  // Очистка
+    gulp.task('clean', function() {
+      return gulp.src('dist', { read: false }) 
+        .pipe(rimraf());
+    });
+
+
+  // Сборка и вывод размера содержимого папки dist
+gulp.task('dist', ['useref', 'images', 'fonts', 'extras'], function () {
+  return gulp.src('dist/**/*').pipe(size({title: 'build'}));
+});
+
+// Собираем папку DIST (только после компиляции Jade)
+gulp.task('build', ['clean'], function () {
+  gulp.start('dist');
+});

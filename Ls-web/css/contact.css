@@ -18,6 +18,7 @@ border-radius:  0 0 5px 5px;
 
 .contact-form-wraper {
 	width: 400px;
+	height: auto;
 	margin: 0 auto;
 	font-family: 'fira_sanslight';
 }
@@ -25,7 +26,11 @@ border-radius:  0 0 5px 5px;
 .input-place-left {
 	width: 48%;
 	float: left;
-	
+}
+
+.row {
+	display: block;
+	height: auto;
 }
 
 .input-place-right {
@@ -33,14 +38,10 @@ border-radius:  0 0 5px 5px;
 	float: right;
 	}
 
-#contact_form {
-	position: relative;
-}
-
-
 .form-name, .form-email {
 	line-height: 38px;
-  width: 188px;
+  width: 100%;
+  height: 100%;
 }
 
 .form-name, .form-email, .form-message {
