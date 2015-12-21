@@ -48,6 +48,16 @@ gulp.task('server', function () {
       ]).pipe(gulp.dest('dist'));
     });
 
+// Загружаем сервер
+gulp.task('server-dist', function () {  
+  browserSync({
+    port: 9000,
+    server: {
+      baseDir: 'dist'
+    }
+  });
+});
+
 // Слежка
 gulp.task('watch', function () {
   gulp.watch([
@@ -104,3 +114,28 @@ gulp.task('dist', ['useref', 'images', 'fonts', 'extras'], function () {
 gulp.task('build', ['clean'], function () {
   gulp.start('dist');
 });
+
+
+// Send to ftp
+var gutil = require('gulp-util'),
+    ftp = require ('vinyl-ftp');
+
+    gulp.task( 'deploy', function(){
+
+      var conn = ftp.create( {
+        host:    '185.74.252.11',
+        user:    '',
+        password: '',
+        parallel: 10,
+        log: gutil.log
+      });
+       
+       var globs = [
+       'dist/**/*'
+       ];
+
+       return gulp.src(globs,{base:'dist/', buffer: false })
+       .pipe(conn.dest( 'public_html/bigben.one/'));
+      
+      });
+    
