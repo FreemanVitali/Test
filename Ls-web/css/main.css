@@ -414,3 +414,11 @@ font-size: 14px;
   border: 1px solid #f97e76;
   background-color:#fad2d1;
 }
+
+input {
+	height: 40px;
+}
+
+input, textarea {
+	width: 100%;
+}
