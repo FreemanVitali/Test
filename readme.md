@@ -1,6 +1,6 @@
  Как установить проект
 
-1 git clone https://github.com/FreemanVitali/Test.git
+1 git clone https://github.com/FreemanVitali/portfolio.git
 
 2 cd site
 
