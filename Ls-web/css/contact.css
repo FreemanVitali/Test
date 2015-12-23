@@ -88,6 +88,11 @@ border-bottom: 2px solid #3ba8c0;
 cursor: pointer;
 font-family: 'fira_sansbook';
 color: white;
+
+}
+
+.submit-button:active {
+	outline: none;
 }
 
 .clear-button {
